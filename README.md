@@ -1,5 +1,22 @@
 <h1>Big Brain Quiz</h1>
 
+<p> Many people already know about educational quizzes, but few know their true potential.</p>
+<p>An educational quiz is a tool that can be used in a classroom, course, or for reviewing content in a teaching process.</p>
+<p>This game also has an evaluation method.</p>
+<p>We can say that quizzes are a practical way of learning, because this method assesses the degree of prior knowledge of a student on a given topic, as well as evaluating what is retained after entering the classroom in an interesting and innovative way.</p>
+<p>Visit our page by clicking here:
+<a href=" "  target="_blank" rel=”noopener”> Big Brain Quiz</a>
+</p>
+<br>
+
+![Name here]()
+
+<br>
+<p><strong>Original Quiz project mistakenly deleted from the repository, this Quiz was made based on the <a href="https://www.youtube.com/watch?v=W3WZaAQiQq0&t=3450s"  target="_blank" rel=”noopener”>
+Codi Academy TV</a> project for learning purposes and due to time constraints. Improvements such as question counter and user greeting have been implemented.</strong></p>
+
+
+
 <h2>User Experience</h2>
 <h3>User stories</h3>
 <ul>

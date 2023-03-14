@@ -12,8 +12,7 @@ let collectName = document.querySelector('.user');
 
 
 //-----------------------------------------GAME STRUCTURE---------------------------------------------------
-
-const containerAnswers = document.querySelector('.container-answers')
+//--------------------------------------Codi Academy TV reference-------------------------------------------
 
 
 
@@ -111,18 +110,3 @@ let questions= [
     }]
 
 
-function startGame(){
-  LoadQuestion()
-}
-
-function LoadQuestion(){
-    while(containerAnswers.firstChild){
-        containerAnswers.removeChild(containerAnswers.firstChild)
-    }
-}
-
-
-
-
-
-startGame(LoadQuestion);
