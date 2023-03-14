@@ -68,19 +68,20 @@ let questions = [
     }
 ]
 
+//transform functions into metodos
 
-function start (){
+let game = {
+    start: function (){
     let answers = document.querySelectorAll('.answers');
     answers.forEach(function(element, index){
         element.addEventListener('click', function (){
-            console.log("check answer")
+            this.check(index);
         })
     })
-    showQuestion(answers);
-}
+    game.showQuestion(answers);
+},
 
-
-function showQuestion(quest){
+showQuestion: function (quest){
     // show title
     let titleDiv = document.getElementById('title');
     titleDiv.textContent = quest.title;
@@ -89,6 +90,10 @@ function showQuestion(quest){
     answers.forEach(function(element, index){
         element.textContent = quest.answers[index];
     })
-}
+},
 
-start();
+check: function (user){
+
+}
+}
+game.start();
