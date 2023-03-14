@@ -72,12 +72,15 @@ let game = {
 
 play: function (){
         this.atualPosition = 0;
+        this.scoreTotal = 0;
+
     let answers = document.querySelectorAll('.answers');
         answers.forEach((element, index) => {
         element.addEventListener('click', () => {
             this.check(index);
         })
     })
+    this.scoreBoard();
     game.loadQuestion(questions[this.atualPosition]);
 },
 
@@ -103,11 +106,18 @@ next: function() {
 check: function (user){
     if(this.atualPosition.correct == user){
         console.log("You got Right")
+        this.scoreTotal++;
         } else {
         console.log("You Missed")
         }
+    this.scoreBoard();
     this.next();
     this.loadQuestion(questions[this.atualPosition]);
-}
+},
+
+scoreBoard: function() {
+    let scoreDiv = document.getElementById('score');
+    scoreDiv.textContent = `Scoreboard: ${this.scoreTotal}`;
+},
 }
 game.play();
