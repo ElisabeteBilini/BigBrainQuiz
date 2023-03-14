@@ -147,3 +147,44 @@ header h1{
     cursor: pointer;
     transition: 0.2s;
 }
+
+@media screen and (max-width: 480px){
+    .login{
+        max-width: 300px;
+        height: fit-content;
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+
+    .login h1{
+        font-size: 40px;
+    }
+
+    .login p, label{
+        font-size: 20px;
+    }
+
+    .logo{
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 992px){
+
+}
+
+@media screen and (max-width: 1200px){
+
+}
+
+@media screen and (max-width: 1600px){
+
+}
+
+@media scrren and (max-width: 1900px){
+
+}
