@@ -68,6 +68,10 @@ form{
     font-size: 20px;
 }
 
+label{
+    color: #b97a1a;
+}
+
 .input-form{
     text-align: center;
     font-size: 15px;
@@ -86,12 +90,13 @@ form{
     margin-top: 20px;
     text-align: center;
     text-transform: uppercase;
-    padding: 20px 30px;
+    padding: 15px 20px;
     border-radius: 10px;
     background-color: #134657;
     color: #fff;
     border-color: transparent;
     font-weight: bold;
+    font-size: 15px;
 }
 
 .initial-btn:hover{
@@ -102,7 +107,6 @@ form{
 
 
 /*         GAME.PAGE         */
-
 header{
     display: flex;
     justify-content: center;
@@ -229,6 +233,9 @@ u{
     align-items: center;
 }
 
+#footer-btn a{
+    text-decoration: none;
+}
 
 
 
@@ -239,6 +246,9 @@ u{
 
 
 
+
+
+/*   Viewports  */
 @media screen and (max-width: 480px){
     .login{
         width: 300px;
