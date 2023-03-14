@@ -21,7 +21,7 @@ let questions = [
         answers: ['The Soviet Union', 'Japan', 'China', 'Canada'],
         correct: 0
     },
-    {
+  {
         title: 'What scandal forced US President Richard Nixon to resign in 1974?',
         answers: ['Iran-Contra Affair', 'Lewinsky Scandal', 'Watergate Scandal', 'Whitewater Scandal'],
         correct: 2
@@ -66,34 +66,48 @@ let questions = [
         answers: ['INIAC', 'CAINE', 'ENIAC', 'CNIEC'],
         correct: 2
     }
-]
-
-//transform functions into metodos
+] 
 
 let game = {
-    start: function (){
+
+play: function (){
+        this.atualPosition = 0;
     let answers = document.querySelectorAll('.answers');
-    answers.forEach(function(element, index){
-        element.addEventListener('click', function (){
+        answers.forEach((element, index) => {
+        element.addEventListener('click', () => {
             this.check(index);
         })
     })
-    game.showQuestion(answers);
+    game.loadQuestion(questions[this.atualPosition]);
 },
 
-showQuestion: function (quest){
+loadQuestion: function (question){
+    this.currentQuest = question;
     // show title
     let titleDiv = document.getElementById('title');
-    titleDiv.textContent = quest.title;
+    titleDiv.textContent = question.title;
     // show answers
     let answers = document.querySelectorAll('.answers');
     answers.forEach(function(element, index){
-        element.textContent = quest.answers[index];
+        element.textContent = question.answers[index];
     })
 },
 
-check: function (user){
+next: function() {
+    this.atualPosition++;
+    if(this.atualPosition == questions.length){
+        this.atualPosition = 0;
+    }
+},
 
+check: function (user){
+    if(this.atualPosition.correct == user){
+        console.log("You got Right")
+        } else {
+        console.log("You Missed")
+        }
+    this.next();
+    this.loadQuestion(questions[this.atualPosition]);
 }
 }
-game.start();
+game.play();
