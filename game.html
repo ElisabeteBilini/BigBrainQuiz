@@ -50,10 +50,10 @@
 
             btnInitial.addEventListener('click', () => {
                 const collectName = document.querySelector('username').value; 
-                DOM.setItem('userName', collectName); 
+                localStorage.setItem('userName', collectName); 
             })
 
-            if(collectName !== null) collectName.textContent = DOM.getItem('userName');
+            if(collectName !== null) collectName.textContent = localStorage.getItem('userName');
         </script>
 </body>
 </html>
