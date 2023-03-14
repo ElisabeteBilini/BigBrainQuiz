@@ -43,5 +43,21 @@
     <section>
        
     </section>
+
+        <!-- JavaScript files-->
+        <script src="assets/js/script.js"></script>
+
+        <!-- Collect username from index.html page-->
+        <script>
+            const btnInitial = document.querySelector('initial-btn');
+            const collectName = document.querySelector('user');
+
+            btnInitial.addEventListener('click', () => {
+                const collectName = document.querySelector('username').value; 
+                DOM.setItem('userName', collectName); 
+            })
+
+            if(collectName !== null) collectName.textContent = DOM.getItem('userName');
+        </script>
 </body>
 </html>
