@@ -18,7 +18,7 @@
         </header>
              <div id="hello">
                 <p class="welcome">Welcome to the game, <span class="user"></span></p>
-                <p class="progress"><span class="numberQuestion"></span> / <span class="totalQuestions"></span> questions</p>
+                <p class="progress" id="progress"><span class="numberQuestion"></span> / <span class="totalQuestions"></span> questions</p>
             </div>
         </div>
         <!-- Structure of game-->
@@ -26,10 +26,10 @@
         <div class="divQuestions">
             <div id="title"></div>
                 <ul>
-                    <li class="answers">Test</li>
-                    <li class="answers">Test</li>
-                    <li class="answers">Test</li>
-                    <li class="answers">Test</li>
+                    <li class="answers"></li>
+                    <li class="answers"></li>
+                    <li class="answers"></li>
+                    <li class="answers"></li>
                 </ul>
                 <div id="score"></div>
                 <div id="result"></div>
@@ -40,20 +40,8 @@
         </div>
     </section>
 
-        <!-- JavaScript files-->
-        <script src="assets/js/script.js"></script>
+<!-- JavaScript files-->
+<script src="assets/js/script.js"></script>
 
-        <!-- Collect username from index.html page-->
-        <script>
-            const btnInitial = document.querySelector('initial-btn');
-            const collectName = document.querySelector('user');
-
-            btnInitial.addEventListener('click', () => {
-                const collectName = document.querySelector('username').value; 
-                localStorage.setItem('userName', collectName); 
-            })
-
-            if(collectName !== null) collectName.textContent = localStorage.getItem('userName');
-        </script>
 </body>
 </html>
