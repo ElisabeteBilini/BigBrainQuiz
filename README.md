@@ -5,7 +5,7 @@
 <p>This game also has an evaluation method.</p>
 <p>We can say that quizzes are a practical way of learning, because this method assesses the degree of prior knowledge of a student on a given topic, as well as evaluating what is retained after entering the classroom in an interesting and innovative way.</p>
 <p>Visit our page by clicking here:
-<a href=" "  target="_blank" rel=”noopener”> Big Brain Quiz</a>
+<a href="https://elisabetebilini.github.io/BigBrainQuiz/"  target="_blank" rel=”noopener”> Big Brain Quiz</a>
 </p>
 <br>
 

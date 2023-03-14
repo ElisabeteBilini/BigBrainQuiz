@@ -68,22 +68,27 @@ let questions = [
     }
 ]
 
-function showQuestion(quest){
 
+function start (){
+    let answers = document.querySelectorAll('.answers');
+    answers.forEach(function(element, index){
+        element.addEventListener('click', function (){
+            console.log("check answer")
+        })
+    })
+    showQuestion(answers);
+}
+
+
+function showQuestion(quest){
+    // show title
     let titleDiv = document.getElementById('title');
     titleDiv.textContent = quest.title;
-
+    // show answers
     let answers = document.querySelectorAll('.answers');
     answers.forEach(function(element, index){
         element.textContent = quest.answers[index];
-        element.addEventListener('click', function (){
-            if(index == quest.correct){
-                console.log("Right")
-            } else {
-                console.log("wrong")
-            }
-        })
     })
 }
 
-showQuestion(answers);
+start();
