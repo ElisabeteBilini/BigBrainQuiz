@@ -163,22 +163,61 @@ Codi Academy TV</a> project for learning purposes and due to time constraints. I
 </ol>
 
 <h2>Testing</h2>
-<p></p>
 <ul>
 <li> <a href="https://validator.w3.org/" target="_blank" rel=”noopener”>W3C Markup Validator</a></li>
 <li> <a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank" rel=”noopener”>W3C CSS Validator</a></li>
 <li> <a href="https://codebeautify.org/jsvalidate" target="_blank" rel=”noopener”>Code Beautify (JavaScript Validator)</a></li>
 <li>Lighthouse (Chrome Developer Tools)</a></li>
-<li> <a href="https://www.microsoft.com/edge" target="_blank" rel=”noopener”>Microsoft Edge</a></li>
-<li> <a href="https://www.mozilla.org/en-US/firefox/windows" target="_blank" rel=”noopener”>Firefox</a></li>
-<li> <a href="https://www.google.com
-" target="_blank" rel=”noopener”>Microsoft Chrome </a></li>
+<br>
+
+![index](assets/images/Lighthouse1.png)
+<br>
+
+![index](assets/images/Lighthouse2.png)
+<br>
 </ul>
 
 <h3>Testing User Stories from User Experience (UX) Section</h3>
 
-????????????????
+<ul>
+<li>As a user, I want to consume content about world history, wars and politics.</li>
+<li>As a user, I want a site that is intuitive and easy to navigate.</li>
+<li>As a user, I want it to challenge me to improve my knowledge.</li>
+</ul>
 
+<h3>Manual Testing</h3>
+<p>The manual test was done on a self-built desktop with an HP Pavilion Gaming Laptop, 16.1", Windows 10 Home, Intel® Core™ i5, 8GB RAM, 1TB HDD, NVIDIA® GeForce® GTX 1650 Ti</p>
+
+| Feature tested | Expected result                                    | Current results | Approved disapproved |
+| :---           |     :---:                                          |      :---:      |                 ---: |
+| Send username  |  Required User Collection.                          |   as expected   | To spend             |
+| Start button   |  When clicked, the survey page should open.        |   as expected   | To spend             |
+| Greetings to the user           |   Captures user name and displays it on the quiz screen along with a greeting. |   as expected   | To spend             |
+| Question Counting|  Shows the number of questions answered and the quiz total.  |   as expected   | To spend             |
+| Quiz|  Shows questions and answers on the screen, switching automatically after clicking on the answer.|   as expected   | To spend             |
+| Scoreboard|  Keeps the score updated.|   as expected   | To spend             |
+| Check Answers|  Correct or Incorrect Response Message (tells you the correct answer).|   as expected   | To spend             |
+| Restart Button / Play Again Button|  Guides the user to the first question and resets the score to zero.|   as expected   | To spend             |
+| Exit Button|  On the mobile screen it redirects the user to the home screen and on the browser it closes the screen.|   as expected   | To spend             |
+| Final message|  Congratulates user, informs percentage and how many questions he got right.|   as expected   | To spend             |
+<br>
+
+<h3>Browser Test</h3>
+
+| Browser Tested  | Work Status        |
+| ----------------|--------------------|
+| Microsoft Edge  |  Works as expected |
+| Chrome          |  Works as expected |
+| Firefox         |  Works as expected |
+
+<br>
+<h3>Device Test</h3>
+
+| Browser Tested              | Work Status        |
+| ----------------------------|--------------------|
+| Huawei Y5                   |  Works as expected |
+| Samsung Galaxy A12          |  Works as expected |
+<br>
 
 <h3>Improvements to be Implemented</h3>
 <ul>
