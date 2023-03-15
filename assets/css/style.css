@@ -283,10 +283,7 @@ display: none;
     justify-content: space-around;
     align-items: center;
 }
-li:hover {
-  background-color: #fff !important;
-  color: #000 !important;
-}
+
 
 
 /* Desktop */
@@ -300,10 +297,6 @@ li:hover {
     border-radius: 10px;
   }
 
-  li:hover {
-    background-color: #fff !important;
-    color: #000 !important;
-  }
 
 }
 
@@ -347,10 +340,6 @@ header, #hello, #title, .answers, #score, #result{
   padding-top: 15px;
 }
 
-li:hover {
-  background-color: #fff !important;
-  color: #000 !important;
-}
 }
 
 /* Mobiles */
