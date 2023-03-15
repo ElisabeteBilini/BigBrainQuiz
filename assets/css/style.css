@@ -244,64 +244,436 @@ u{
     text-decoration: none;
 }
 
+/* Mobiles */
+@media (min-width: 320px) and (max-width: 480px) {
 
-
-
-
-
-
-
-
-
-
-
-/*   Viewports  */
-@media screen and (max-width: 480px){
-    .login{
-        width: 300px;
-        height: 75vh;
-        margin-top: 20px;
-        border-radius: 50px 0;
-    }
-
-    .login h1{
-        font-size: 40px;
-        padding-top: 20px;
-        padding-bottom: 10px;
-    }
-
-    .logo{
-        width: 80px;
-    }
-
-    .login p, label{
-        font-size: 20px;
-    }
-
-    .initial-btn{
-        padding: 10px 20px;
-    }
+body{
+    height: auto;
+    display: flex;
+}
+    
+.login{
+    margin-top: 5vh;
+    height: 90vh;
+    width: 18rem;
 }
 
-@media (min-width: 481px) and (max-width: 768px){
-    .login{
-        width: 450px;
-        height: 80vh;
+.login h1{
+    font-size: 35px;
+}
+
+.logo{
+    width: 80px;
+}
+
+.login p{
+    font-size: 20px;
+}
+
+#username-form {
+    font-size: 18px;
+}
+
+.initial-btn{
+    padding: 5px 10px;
+}
+
+/* game.html page*/
+
+header{
+    margin-top: 20px;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;  
+    background-color: #fff;
+    width: 600px;
+    height: 100px;
+    border-radius: 25px;
+    }
+
+    header h1{
+      padding-left: 5px;
+    }
+
+    .logo-game{
+      width: 4.5rem;
+      animation: blink 1.5s linear infinite;
+    }
+    
+    @keyframes blink{
+      0% {opacity: 1;}
+      50% {opacity: 0.6;}
+      100% {opacity: 1;}
+    }
+
+    #hello{
+    display: flex;
+    justify-content: space-between;
+    text-align:center;
+    padding-top: 5px;
+    gap: 5rem;
+    margin: 8px 0 0 0;
+    width: 600px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #fff;
+    color: #c7880a;
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 20px;
+    }
+
+    .welcome {
+        margin-top: 0.5rem;
+        margin-right: 0.5rem;
+        text-align: right;
+    }
+
+    .progress{
+      padding-top:8px;
+      margin-left: 0.5rem;
+    }
+
+    ul {
+    padding: 0px;
+    }
+    
+    #title {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    width: 600px;
+    height: 80px;
+    text-transform: uppercase;
+    line-height: 25px;
+    border-radius: 25px;
+    background-color: #fff;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 10px;
+    color: #0a0101;
+    cursor: pointer;
+    transition: .5s;
+    }
+
+    .answers {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    width: 600px;
+    height: 50px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    background-color: #fff;
+    text-align: left;
+    padding-left: 20px;
+    color: #000;
+    cursor: pointer;
+    transition: .2s;
+    }
+
+    .answers:hover {
+    background-color: #134657;
+    color: #fff;
+    text-transform: uppercase;
+    transition: .2s;
+    }
+
+    #score{
+      width: 600px;
+      height: 50px;
+      line-height: 50px;
+      background-color:   #add8e6;
+      border-radius: 25px;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+   
+    #result{
+      width: 600px;
+      height: 70px;
+      text-align: center;
+      background-color:  #add8e6;
+      border-radius: 25px;
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #134657;
+    }
+
+    #congrats {
+        height: 25vh;
+        width: 600px;
+        background-color: #fff;
+        border-radius: 25px;
+        justify-content: center;
+        color: #000;
         margin-top: 30px;
     }
+    
+    #congrats h2 {
+        font-size: 50px;
+        text-align: center;
+        margin-top: 25px;
+        color: #c7880a;
+    }
+    
+    #congrats p {
+        text-align: center;
+        font-size: 20px;
+        padding-top: 10px
+    }
+    
+    #congrats-btn {
+      text-align: center;
+      padding-top: 40px;
+  }
+
+    #display-score {
+        margin-block: 1rem;
+        color: #c7880a;
+        font-weight: bold;
+    }
+
+    #display-score span, #display-score p{
+      font-size: 30px;
+    }
+    
+    .hidden{
+      display: none;
+    }
+
+#footer-btn{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-top: 10px;
+  justify-content: space-around;
+  align-items: center;
 }
 
-@media (min-width: 769px) and (max-width: 992px){
- 
+}
+  
+/* Laptop displays */
+@media screen and (max-width: 1366px) {
+.login{
+  height: 75vh;
 }
 
-@media screen and (max-width: 1200px){
- 
+li:hover {
+  background-color: #134657 !important;
+  color: #fff !important;
+}
 }
 
-@media screen and (max-width: 1600px){
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+header, #hello, #title, .answers, #score, #result{
+  width:450px;
+  margin: 10px 30px 0 40px;
+  border-radius: 10px;
 }
 
-@media scrren and (max-width: 1900px){
-   
+.login{
+  height: 60vh;
+}
+  
+#hello{
+  font-size: 15px;
+  padding:unset;
+  padding: 5px 10px 0 5px;
+}
+  
+#congrats{
+  width:450px;
+  height: 35vh;
+}
+  
+#congrats h2{
+  font-size: 40px;
+  padding-top: 20px;
+  color: #c7880a;
+}
+  
+#display-score span, #display-score{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#result{
+  font-size: 15px;
+  padding-top: 15px;
+}
+
+li:hover {
+  background-color: #134657 ;
+  color: #fff ;
+}
+}
+
+/* Mobiles */
+@media (min-width: 320px) and (max-width: 480px) {
+body{
+  height: auto;
+  display: flex;
+  overflow-x: auto;
+}
+
+.login{
+  width: 18rem;
+  display: flex; 
+  justify-content: center;
+}
+
+.login{
+  margin-top: unset;
+  margin-top: 5vh;
+  height: 75vh;
+}
+  
+.login h1 {
+  font-size: 35px;
+  padding-bottom: 15px;
+}
+  
+.logo {
+  width: 8rem;
+  animation: blink 1.5s linear infinite;
+} 
+
+#hello{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  border-radius: 15px;
+  width: 19rem;
+  height: 80px;
+  font-size: 16px;
+  gap: 5px;
+}
+
+#progress{
+  padding-bottom: 5px;
+}
+  
+.login p {
+  font-size: 18px;
+}
+#username-form {
+  font-size: 15px;
+}
+  
+.input-form {
+  font-size: 10px;
+}
+  
+.initial-btn, .content a {
+  padding: 10px 20px;
+  font-size: 15px;
+  margin-top: 10px;
+}
+  
+/* game.html*/
+main{
+      height: auto;
+      margin: 10px 20px;
+} 
+
+header {
+  margin-top: unset;
+  font-size: 15px;
+  width: 19rem;
+  height: 50px;
+  border-radius: 15px;
+}
+
+header h1{
+  font-size: 25px;
+}
+
+.logo-game{
+  width: 2.5rem;
+}
+
+#hello {
+  font-size: 14px;
+  justify-items: auto;
+  line-height: 5px;
+  height: 45px;
+  padding-left: 45px;
+}
+
+#title {
+  width: 19rem;
+  font-size: 13px;
+  border-radius: 15px;
+  height: 50px;
+  line-height: 15px;
+}
+  
+.answers {
+  width: 19rem;
+  font-size: 12px;
+  border-radius: 15px;
+  height: 30px;
+}
+  
+#score {
+  margin-top: 0;
+  border-radius: 15px;
+  width: 19rem;
+  font-size: 20px;
+  height: 40px;
+  font-size: 13px;
+}
+  
+#result {
+  width: 19rem;
+  border-radius: 15px;
+  font-size: 13px;
+  height: 45px;
+  margin-bottom: unset;
+}
+
+#footer-btn{
+  padding: 5px 10px;
+}
+
+#congrats{
+  width: 19rem;
+  height: 55vh;
+  margin-bottom: unset;
+  margin-top: unset;
+  border-radius: 15px;
+}
+
+#congrats h2{
+  font-size: 20px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  color: #c7880a;
+}
+
+#congrats p{
+  font-size: 16px;
+}
+
+#display-score span, #display-score{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+li:hover {
+  background-color: #134657 !important;
+  color: #fff !important;
+}
+
 }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <section>
+    <main>
         <div>
         <!-- Heading of game-->
             <header>
@@ -37,8 +37,23 @@
             <div id="footer-btn">
                 <a href="index.html" class="initial-btn">Restart</a>
                 <a href="index.html" class="initial-btn">Exit Game</a>
+            </div>
         </div>
-    </section>
+    </main>
+    <div id="congrats" class="hidden">
+        
+        <h2>CONGRATULATIONS</h2>
+        <p>You finished the quiz!</p>
+        
+        <p id="display-score"><span>???</span>%</p>
+        
+        <p>You got it right <span id="correct-answers">?</span> out of <span id="questions-qty">??</span> questions</p>
+        
+        <div id="congrats-btn">
+        <a href="game.html" class="initial-btn btn-play">Play Again</a>
+        <a href="index.html" class="initial-btn" onclick="window.close()">Exit Game</a>
+        </div>
+    </div>
 
 <!-- JavaScript files-->
 <script src="assets/js/script.js"></script>
