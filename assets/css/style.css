@@ -289,216 +289,208 @@ display: none;
 
 /* Mobiles */
 @media (min-width: 320px) and (max-width: 480px) {
-
-body{
-    height: auto;
-    display: flex;
-}
     
 .login{
-    margin-top: 5vh;
-    height: 90vh;
-    width: 18rem;
+  margin-top: 20vh;
+  height: 95vh;
+  width: 18rem;
 }
 
 .login h1{
-    font-size: 35px;
+  font-size: 35px;
 }
 
 .logo{
-    width: 80px;
+  width: 80px;
 }
 
 .login p{
-    font-size: 20px;
+  font-size: 20px;
 }
 
 #username-form {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .initial-btn{
-    padding: 5px 10px;
+  padding: 5px 10px;
 }
 
 /* game.html page*/
 
 header{
-    margin-top: 20px;
-    display: flex;
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;  
-    background-color: #fff;
-    width: 600px;
-    height: 100px;
-    border-radius: 25px;
-    }
+  margin-top: 20px;
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;  
+  background-color: #fff;
+  width: 600px;
+  height: 100px;
+  border-radius: 25px;
+}
 
-    header h1{
-      padding-left: 5px;
-    }
+header h1{
+  padding-left: 5px;
+}
 
-    .logo-game{
-      width: 4.5rem;
-      animation: blink 1.5s linear infinite;
-    }
+.logo-game{
+  width: 4.5rem;
+  animation: blink 1.5s linear infinite;
+}
     
-    @keyframes blink{
-      0% {opacity: 1;}
-      50% {opacity: 0.6;}
-      100% {opacity: 1;}
-    }
+@keyframes blink{
+  0% {opacity: 1;}
+  50% {opacity: 0.6;}
+  100% {opacity: 1;}
+}
 
-    #hello{
-    display: flex;
-    justify-content: space-between;
-    text-align:center;
-    padding-top: 5px;
-    gap: 5rem;
-    margin: 8px 0 0 0;
-    width: 600px;
-    height: 50px;
-    border-radius: 25px;
-    background-color: #fff;
-    color: #c7880a;
-    padding: 5px 15px;
-    font-weight: bold;
-    font-size: 20px;
-    }
+#hello{
+  display: flex;
+  justify-content: space-between;
+  text-align:center;
+  padding-top: 5px;
+  gap: 5rem;
+  margin: 8px 0 0 0;
+  width: 600px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #fff;
+  color: #c7880a;
+  padding: 5px 15px;
+  font-weight: bold;
+  font-size: 20px;
+}
 
-    .welcome {
-        margin-top: 0.5rem;
-        margin-right: 0.5rem;
-        text-align: right;
-    }
+.welcome {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  text-align: right;
+}
 
-    .progress{
-      padding-top:8px;
-      margin-left: 0.5rem;
-    }
+.progress{
+  padding-top:8px;
+  margin-left: 0.5rem;
+}
 
-    ul {
-    padding: 0px;
-    }
+ul {
+  padding: 0px;
+}
     
-    #title {
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    margin: 8px 0;
-    width: 600px;
-    height: 80px;
-    text-transform: uppercase;
-    line-height: 25px;
-    border-radius: 25px;
-    background-color: #fff;
-    text-align: left;
-    padding-left: 20px;
-    padding-right: 10px;
-    color: #0a0101;
-    cursor: pointer;
-    transition: .5s;
-    }
+#title {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  width: 600px;
+  height: 80px;
+  text-transform: uppercase;
+  line-height: 25px;
+  border-radius: 25px;
+  background-color: #fff;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 10px;
+  color: #0a0101;
+  cursor: pointer;
+  transition: .5s;
+}
 
-    .answers {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    margin: 8px 0;
-    width: 600px;
-    height: 50px;
-    text-transform: uppercase;
-    border-radius: 25px;
-    background-color: #fff;
-    text-align: left;
-    padding-left: 20px;
-    color: #000;
-    cursor: pointer;
-    transition: .2s;
-    }
+.answers {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  width: 600px;
+  height: 50px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  background-color: #fff;
+  text-align: left;
+  padding-left: 20px;
+  color: #000;
+  cursor: pointer;
+  transition: .2s;
+}
 
-    .answers:hover {
-    background-color: #134657;
-    color: #fff;
-    text-transform: uppercase;
-    transition: .2s;
-    }
+.answers:hover {
+  background-color: #134657;
+  color: #fff;
+  text-transform: uppercase;
+  transition: .2s;
+}
 
-    #score{
-      width: 600px;
-      height: 50px;
-      line-height: 50px;
-      background-color:   #add8e6;
-      border-radius: 25px;
-      font-size: 30px;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 10px;
-    }
+#score{
+  width: 600px;
+  height: 50px;
+  line-height: 50px;
+  background-color:   #add8e6;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
    
-    #result{
-      width: 600px;
-      height: 70px;
-      text-align: center;
-      background-color:  #add8e6;
-      border-radius: 25px;
-      padding-top: 10px;
-      padding-left: 10px;
-      padding-right: 20px;
-      font-size: 20px;
-      font-weight: bold;
-      color: #134657;
-    }
+#result{
+  width: 600px;
+  height: 70px;
+  text-align: center;
+  background-color:  #add8e6;
+  border-radius: 25px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #134657;
+}
 
-    #congrats {
-        height: 25vh;
-        width: 600px;
-        background-color: #fff;
-        border-radius: 25px;
-        justify-content: center;
-        color: #000;
-        margin-top: 30px;
-    }
+#congrats {
+  height: 25vh;
+  width: 600px;
+  background-color: #fff;
+  border-radius: 25px;
+  justify-content: center;
+  color: #000;
+  margin-top: 30px;
+}
     
-    #congrats h2 {
-        font-size: 50px;
-        text-align: center;
-        margin-top: 25px;
-        color: #c7880a;
-    }
+#congrats h2 {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 25px;
+  color: #c7880a;
+}
     
-    #congrats p {
-        text-align: center;
-        font-size: 20px;
-        padding-top: 10px
-    }
+#congrats p {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 10px
+}
     
-    #congrats-btn {
-      text-align: center;
-      padding-top: 40px;
-  }
+#congrats-btn {
+  text-align: center;
+  padding-top: 40px;
+}
 
-    #display-score {
-        margin-block: 1rem;
-        color: #c7880a;
-        font-weight: bold;
-    }
+#display-score {
+  margin-block: 1rem;
+  color: #c7880a;
+  font-weight: bold;
+}
 
-    #display-score span, #display-score p{
-      font-size: 30px;
-    }
+#display-score span, #display-score p{
+  font-size: 30px;
+}
     
-
 #footer-btn{
   display: flex;
   flex-direction: row;
   gap: 10px;
-  padding-top: 10px;
+  padding-top: 5px;
   justify-content: space-around;
   align-items: center;
 }
-
 }
   
 /* Laptop displays */
