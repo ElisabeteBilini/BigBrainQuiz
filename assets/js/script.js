@@ -79,6 +79,13 @@ let divQuestions = document.querySelector('.divQuestions');
 let numberQuestions = questions.length;
 let spanNumberQuestion = document.querySelector('.numberQuestion');
 let spanTotalQuestions = document.querySelector('.totalQuestions');
+let btnExit = document.querySelector('.btn-exit');
+let spanCorrectAnswers = document.querySelector('#correct-answers');
+let spanQuestionsQty = document.querySelector('#questions-qty');
+let spanDisplayScore = document.querySelector('#display-score span');
+let hello = document.querySelector('#hello');
+let footerbtn = document.querySelector('#footer-btn');
+let hover = document.querySelector(' .answers:hover');
 
 
 // Structure of game
@@ -122,12 +129,15 @@ next: function() {
     }
 },
 
+//answer verification
 check: function (user){
     if(this.atualPosition.correct == user){
-        console.log("You got Right")
+        console.log("Right")
         this.scoreTotal++;
+        this.loadAnswer(true);
         } else {
-        console.log("You Missed")
+        console.log("Wrong")
+        this.loadAnswer(false);
         }
     this.scoreBoard();
     this.next();
@@ -138,5 +148,20 @@ scoreBoard: function() {
     let scoreDiv = document.getElementById('score');
     scoreDiv.textContent = `Scoreboard: ${this.scoreTotal}`;
 },
+ 
+//show the answers
+loadAnswer: function(right){
+    if (right) {
+        result =  'Well done, you got it right!';
+    } else {
+        let question = questions[this.atualPosition];
+        let indiceArray = question.correct;
+        let correctAnswer = question.answers[indiceArray];
+        result = `Sorry, you made a mistake, the correct answer is: ${correctAnswer}`;
+        resultDiv.textContent = result;
+    }
+}
+
+
 }
 game.play();
