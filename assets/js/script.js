@@ -68,38 +68,54 @@ let questions = [
     }
 ] 
 
+
+// Variables declaration
+let answers = document.querySelectorAll('.answers');
+let resultDiv = document.getElementById('result');
+
+
+// Structure of game
 let game = {
 
 play: function (){
-        this.atualPosition = 0;
-        this.scoreTotal = 0;
-
-    let answers = document.querySelectorAll('.answers');
-        answers.forEach((element, index) => {
+    this.atualPosition = 0;
+    this.scoreTotal = 0;
+    answers.forEach((element, index) => {
         element.addEventListener('click', () => {
-            this.check(index);
+                this.check(index);
         })
     })
     this.scoreBoard();
     game.loadQuestion(questions[this.atualPosition]);
 },
 
+// show questions and answers
 loadQuestion: function (question){
     this.currentQuest = question;
     // show title
-    let titleDiv = document.getElementById('title');
-    titleDiv.textContent = question.title;
+    title.textContent = question.title;
     // show answers
-    let answers = document.querySelectorAll('.answers');
-    answers.forEach(function(element, index){
+    answers.forEach(function (element, index){
         element.textContent = question.answers[index];
     })
+    // show question number
+    spanNumberQuestion.textContent = this.atualPosition+1;
+    spanTotalQuestions.textContent = numberQuestions;
 },
 
+// next question
 next: function() {
     this.atualPosition++;
-    if(this.atualPosition == questions.length){
-        this.atualPosition = 0;
+    if(this.atualPosition >= numberQuestions){
+
+        let congrats = document.getElementById('congrats');
+        let divQuestions = document.querySelector('.divQuestions');
+        let btnExit = document.querySelector('.btn-exit');
+
+                
+        congrats.classList.remove('hidden');
+        divQuestions.classList.add('.hidden');
+        btnExit.classList.add('.hidden');
     }
 },
 
