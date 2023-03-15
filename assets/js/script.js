@@ -1,10 +1,10 @@
  // Collect username from index.html page -----------------------------------------------------------------
 
-let btnInitial = document.querySelector('.initial-btn');
-let collectName = document.querySelector('.user');
+const btnInitial = document.querySelector('.initial-btn');
+const collectName = document.querySelector('.user');
 
     btnInitial.addEventListener('click', () => {
-    let collectName = document.querySelector('.userName').value; 
+    const collectName = document.querySelector('.userName').value; 
     localStorage.setItem('userName', collectName); 
     })
 
