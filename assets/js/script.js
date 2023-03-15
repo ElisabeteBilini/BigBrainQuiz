@@ -123,9 +123,9 @@ next: function() {
     if(this.atualPosition >= numberQuestions){
                 
         congrats.classList.remove('hidden');
-        divQuestions.classList.add('.hidden');
-        btnExit.classList.add('.hidden');
-        hello.style.display= 'none;'
+        divQuestions.classList.add('hidden');
+        btnExit.classList.add('hidden');
+        hello.style.display= 'none';
         footerbtn.style.display = 'none';
 
 //final score 
