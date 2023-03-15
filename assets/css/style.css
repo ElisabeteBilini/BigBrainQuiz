@@ -489,8 +489,8 @@ header h1{
 }
 
 li:hover {
-  background-color: #134657 !important;
-  color: #fff !important;
+  background-color: #fff !important;
+  color: #000 !important;
 }
 }
 
