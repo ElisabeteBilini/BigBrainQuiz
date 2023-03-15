@@ -26,7 +26,7 @@ Codi Academy TV</a> project for learning purposes and due to time constraints. I
 <li>That the messages are clear, and the responsiveness works correctly.</li>
 </ul>
 <ul>
-<li>Que o conteúdo não está visualmente poluído e não causa distracções inesperadas.</li>
+<li>That the content is not visually polluted and does not cause unexpected distractions.</li>
 </ul>
 </ul>
 <ul>
