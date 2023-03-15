@@ -75,10 +75,11 @@ let title = document.getElementById('title');
 let score = document.getElementById('score');
 let resultDiv = document.getElementById('result');
 let congrats = document.getElementById('congrats');
-let divQuestions = document.querySelector('.divQuestions');
+
 let numberQuestions = questions.length;
 let spanNumberQuestion = document.querySelector('.numberQuestion');
 let spanTotalQuestions = document.querySelector('.totalQuestions');
+let divQuestions = document.querySelector('.divQuestions');
 let btnExit = document.querySelector('.btn-exit');
 let spanCorrectAnswers = document.querySelector('#correct-answers');
 let spanQuestionsQty = document.querySelector('#questions-qty');
@@ -111,7 +112,7 @@ loadQuestion: function (question){
         element.textContent = question.answers[index];
     })
 
-    // show question number
+// show question number
     spanNumberQuestion.textContent = this.atualPosition+1;
     spanTotalQuestions.textContent = numberQuestions;
 },
@@ -126,31 +127,36 @@ next: function() {
         btnExit.classList.add('.hidden');
         hello.style.display= 'none;'
         footerbtn.style.display = 'none';
+
+//final score 
+    spanQuestionsQty.textContent = numberQuestions;
+    spanCorrectAnswers.textContent = this.scoreTotal;
+    spanDisplayScore.textContent = (this.scoreTotal * 100) / numberQuestions;
     }
 },
 
 //answer verification
 check: function (user){
-    if(this.atualPosition.correct == user){
-        console.log("Right")
+    if(this.currentQuest.correct == user){
+        console.log("right")
         this.scoreTotal++;
-        this.loadAnswer(true);
+        this.loadAnswers(true);
         } else {
-        console.log("Wrong")
-        this.loadAnswer(false);
+        console.log("wrong")
+        this.loadAnswers(false);
         }
     this.scoreBoard();
     this.next();
     this.loadQuestion(questions[this.atualPosition]);
 },
 
+ // load points
 scoreBoard: function() {
-    let scoreDiv = document.getElementById('score');
-    scoreDiv.textContent = `Scoreboard: ${this.scoreTotal}`;
+    score.textContent = `Scoreboard: ${this.scoreTotal}`;
 },
  
 //show the answers
-loadAnswer: function(right){
+loadAnswers: function(right){
     if (right) {
         result =  'Well done, you got it right!';
     } else {
@@ -158,10 +164,8 @@ loadAnswer: function(right){
         let indiceArray = question.correct;
         let correctAnswer = question.answers[indiceArray];
         result = `Sorry, you made a mistake, the correct answer is: ${correctAnswer}`;
-        resultDiv.textContent = result;
     }
-}
-
-
+    resultDiv.textContent = result;
+},
 }
 game.play();
