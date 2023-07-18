@@ -9,19 +9,64 @@
     <link rel="shortcut icon" href="brain.ico" type="image/x-icon">
 </head>
 <body>
+    <!--LOGIN PAGE-->
     <div class="login">
         <h1>Big Brain Quiz</h1>
         <img class="logo" src="assets/images/logo.webp" alt="logo">
         <p>Are you ready to test your knowledge of <strong> World History</strong>?</p>
-        <form id="form-game" action="game.html">
             <div id="username-form">
                 <label for="username">Username: </label>
-                <input type="text" name="username" id="username" class="input-form userName" placeholder="Write you username here" value="" required>
+                <input type="text" name="username" id="username" class="input-form userName" placeholder="Write you username here" value=" " required oninput="return lettersOnly(event);" maxlength="10">
                 </div>
-                <button class="initial-btn">Start Game</button>
-        </form>
+                <button class="initial-btn" onclick="startQuiz()">Start Game</button>
+    </div>
+    <!--GAME PAGE-->
+    <main class="main hidden">
+        <div>
+            <!-- Heading of game-->
+            <header>
+                <img class="logo-game" src="assets/images/logo.webp" alt="logo">
+                <h1>Big Brain Quiz</h1>
+            </header>
+            <div id="hello">
+                <p class="welcome">Welcome to the game, <span class="user"></span></p>
+                <p class="progress" id="progress"><span class="numberQuestion"></span> / <span class="totalQuestions"></span> questions</p>
+            </div>
+        </div>
+        <!-- Structure of game-->
+        <div class="divQuestions">
+            <div id="title"></div>
+            <ul class="container-answers">
+                <li class="answers"></li>
+                <li class="answers"></li>
+                <li class="answers"></li>
+                <li class="answers"></li>
+            </ul>
+        </div>
+        <div id="footer-btn">
+            <button class="initial-btn btn-next" onclick="nextQuestion()">Next</button>
+            <button class="initial-btn btn-restart" onclick="restartQuiz()">Restart</button>
+            <button id="exit2" class="initial-btn btn-exit" onclick="exitGame()">Exit Game</button>
+        </div>
+    </main>
+    <!--CONGRATS PAGE-->
+    <div id="congrats" class="hidden">
+        <h2>CONGRATULATIONS</h2>
+        <p>You finished the quiz!</p>
+        <p id="display-score"><span>???</span>%</p>
+        <p>You got it right <span id="correct-answers">?</span> out of <span id="questions-qty">??</span> questions</p>
+        <div id="congrats-btn" class="hidden">
+            <button class="initial-btn btn-play" onclick="playAgain()">Play Again</button>
+            <button id="exit" class="initial-btn btn-exit" onclick="exitGame()">Exit Game</button>
+        </div>
+    </div>
+    <!--FINAL MESSAGE PAGE-->
+    <div id="message" class="hidden">
+        <img class="logo-game" src="assets/images/logo.webp" alt="logo">
+        <h2>Thank you for playing!</h2>
+        <p>We appreciate your participation in the quiz.</p>
     </div>
     <!-- JavaScript files-->
     <script src="assets/js/script.js"></script>
 </body>
-</html>
+</html> 
