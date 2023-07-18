@@ -31,12 +31,11 @@
  
    return true;
  }
-
-
-// Game Page
-
-//questions and answers 
-const questions = [
+ 
+  // Game Page
+  
+  // Array questions and answers 
+  const questions = [
     {
       title: 'The Cold War was between the United States and what other world power?',
       answers: ['The Soviet Union', 'Japan', 'China', 'Canada'],
@@ -88,38 +87,45 @@ const questions = [
       correct: 2
     }
   ];
-
- // shuffle questions
+  
+  // shuffle questions
  function shuffleQuestions() {
-    for (let i = questions.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [questions[i], questions[j]] = [questions[j], questions[i]];
-    }
-     return questions;
-  }
-  shuffleQuestions();
-
+   for (let i = questions.length - 1; i > 0; i--) {
+     const j = Math.floor(Math.random() * (i + 1));
+     [questions[i], questions[j]] = [questions[j], questions[i]];
+   }
+    return questions;
+ }
+ shuffleQuestions();
+  
+  // Variables
+  let currentQuestion = 0;
+  let score = 0;
+  const messageFinal = document.getElementById('message');
+  const nextButton = document.getElementsByClassName('btn-next')[0];
+  
+  
   function displayQuestion() {
-    const questionElement = document.getElementById('title');
-    const answersElements = document.getElementsByClassName('answers');
-    const numberQuestionElement = document.getElementsByClassName('numberQuestion')[0];
-    
-    const current = questions[currentQuestion];
-    questionElement.textContent = current.title;
+   const questionElement = document.getElementById('title');
+   const answersElements = document.getElementsByClassName('answers');
+   const numberQuestionElement = document.getElementsByClassName('numberQuestion')[0];
+   
+   const current = questions[currentQuestion];
+   questionElement.textContent = current.title;
+ 
+   for (let i = 0; i < answersElements.length; i++) {
+     const answerElement = answersElements[i];
+     answerElement.textContent = current.answers[i];
+     answerElement.classList.remove('correct', 'incorrect');
+     answerElement.addEventListener('click', checkAnswer);
+   }
+ 
+   const questionNumber = currentQuestion + 1;
+   numberQuestionElement.textContent = questionNumber <= 10 ? questionNumber : '';
+ }
   
-    for (let i = 0; i < answersElements.length; i++) {
-      const answerElement = answersElements[i];
-      answerElement.textContent = current.answers[i];
-      answerElement.classList.remove('correct', 'incorrect');
-      answerElement.addEventListener('click', checkAnswer);
-    }
-  
-    const questionNumber = currentQuestion + 1;
-    numberQuestionElement.textContent = questionNumber <= 10 ? questionNumber : '';
-  }
-
   // Check answer
- function checkAnswer(event) {
+  function checkAnswer(event) {
     const selectedAnswer = event.target;
     const selectedAnswerIndex = Array.from(selectedAnswer.parentElement.children).indexOf(selectedAnswer);
     const current = questions[currentQuestion];
@@ -154,9 +160,9 @@ const questions = [
       displayQuestion();
     }
   }
-
+  
   // Finish quiz
- function finishQuiz() {
+  function finishQuiz() {
     const totalQuestions = questions.length;
     const percentage = (score / totalQuestions) * 100;
   
@@ -190,50 +196,50 @@ const questions = [
     displayQuestion();
   }
   
-   // Exit game
- function exitGame() {
+  // Exit game
+  function exitGame() {
+   document.getElementById('congrats').classList.add('hidden');
+   document.getElementsByClassName('main')[0].classList.add('hidden');
+   messageFinal.classList.remove('hidden');
+  }
+  
+  // Play again
+  function playAgain() {
+    currentQuestion = 0;
+    score = 0;
+  
+    document.getElementsByClassName('main')[0].classList.remove('hidden');
     document.getElementById('congrats').classList.add('hidden');
-    document.getElementsByClassName('main')[0].classList.add('hidden');
-    messageFinal.classList.remove('hidden');
-   }
-   
-   // Play again
-   function playAgain() {
-     currentQuestion = 0;
-     score = 0;
-   
-     document.getElementsByClassName('main')[0].classList.remove('hidden');
-     document.getElementById('congrats').classList.add('hidden');
-   
-     const nextButton = document.getElementsByClassName('btn-next')[0];
-     nextButton.classList.add('hidden');
   
+    const nextButton = document.getElementsByClassName('btn-next')[0];
+    nextButton.classList.add('hidden');
+ 
+   displayQuestion();
+  }
+ 
+  
+  // Start quiz
+  function startQuiz() {
     displayQuestion();
-   }
+ 
+    nextButton.addEventListener('click', nextQuestion);
   
-   
-   // Start quiz
-   function startQuiz() {
-     displayQuestion();
+    const totalQuestionsElement = document.getElementsByClassName('totalQuestions')[0];
+    totalQuestionsElement.textContent = questions.length;
   
-     nextButton.addEventListener('click', nextQuestion);
-   
-     const totalQuestionsElement = document.getElementsByClassName('totalQuestions')[0];
-     totalQuestionsElement.textContent = questions.length;
-   
-     const restartButton = document.getElementsByClassName('btn-restart')[0];
-     restartButton.addEventListener('click', restartQuiz);
-   
-     const exitButton = document.getElementsByClassName('btn-exit')[1];
-     exitButton.addEventListener('click', exitGame);
-   
-     const playAgainButton = document.getElementsByClassName('btn-play')[0];
-     playAgainButton.addEventListener('click', playAgain);
+    const restartButton = document.getElementsByClassName('btn-restart')[0];
+    restartButton.addEventListener('click', restartQuiz);
   
-     document.getElementById('footer-btn').classList.remove('hidden');
-     document.getElementById('congrats-btn').classList.add('hidden');
-      
-   }
+    const exitButton = document.getElementsByClassName('btn-exit')[1];
+    exitButton.addEventListener('click', exitGame);
   
-   window.addEventListener('load', startQuiz);
-   
+    const playAgainButton = document.getElementsByClassName('btn-play')[0];
+    playAgainButton.addEventListener('click', playAgain);
+ 
+    document.getElementById('footer-btn').classList.remove('hidden');
+    document.getElementById('congrats-btn').classList.add('hidden');
+     
+  }
+ 
+  window.addEventListener('load', startQuiz);
+  
