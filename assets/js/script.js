@@ -98,3 +98,22 @@ const questions = [
      return questions;
   }
   shuffleQuestions();
+
+  function displayQuestion() {
+    const questionElement = document.getElementById('title');
+    const answersElements = document.getElementsByClassName('answers');
+    const numberQuestionElement = document.getElementsByClassName('numberQuestion')[0];
+    
+    const current = questions[currentQuestion];
+    questionElement.textContent = current.title;
+  
+    for (let i = 0; i < answersElements.length; i++) {
+      const answerElement = answersElements[i];
+      answerElement.textContent = current.answers[i];
+      answerElement.classList.remove('correct', 'incorrect');
+      answerElement.addEventListener('click', checkAnswer);
+    }
+  
+    const questionNumber = currentQuestion + 1;
+    numberQuestionElement.textContent = questionNumber <= 10 ? questionNumber : '';
+  }
