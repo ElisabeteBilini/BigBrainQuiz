@@ -1,18 +1,40 @@
- // Collect username from index.html page -----------------------------------------------------------------
-
-const btnInitial = document.querySelector('.initial-btn');
-const collectName = document.querySelector('.user');
-
-    btnInitial.addEventListener('click', () => {
-    const collectName = document.querySelector('.userName').value; 
-    localStorage.setItem('userName', collectName); 
-    })
-
-    if(collectName !== null) collectName.textContent = localStorage.getItem('userName');
+ // Login Page
+ const btnInitial = document.querySelector('.initial-btn');
+ const collectName = document.getElementById('user');
+ const loginPage = document.querySelector('.login');
+ const mainPage = document.querySelector('.main');
+ const congratsPage = document.getElementById('congrats');
+ const messagePage = document.getElementById('message');
+  
+ btnInitial.addEventListener('click', () => {
+   const username = document.getElementById('username');
+   if (username) {
+     const collectName = username.value;
+     localStorage.setItem('userName', collectName); // Armazena o nome de usuário no localStorage
+     //console.log(collectName);
+     mainPage.classList.remove('hidden');
+     loginPage.classList.add('hidden');
+     document.querySelector('.user').textContent = collectName; // Exibe o nome de usuário na tela
+   }
+ });
+  
+   if(collectName !== null) collectName.textContent = localStorage.getItem('userName');
+ 
+ function lettersOnly(event) {
+   const input = document.getElementById('username');
+   input.value = input.value.replace(/[^a-zA-Z]/g, '');
+   
+   if (!input.value.match(/^[a-zA-Z]+$/)) {
+     event.preventDefault();
+     alert("Enter letters only.");
+   }
+ 
+   return true;
+ }
 
 
 //-----------------------------------------GAME STRUCTURE---------------------------------------------------
-//-------------------------------------Codi Academy TV reference-------------------------------------------
+
 
 //questions and answers 
 let questions = [
