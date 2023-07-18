@@ -5,15 +5,13 @@
 <p>This game also has an evaluation method.</p>
 <p>We can say that quizzes are a practical way of learning, because this method assesses the degree of prior knowledge of a student on a given topic, as well as evaluating what is retained after entering the classroom in an interesting and innovative way.</p>
 <p>Visit our page by clicking here:
-<a href="https://elisabetebilini.github.io/BigBrainQuiz/"  target="_blank" rel=”noopener”> Big Brain Quiz</a>
+<a href=" https://elisabetebilini.github.io/BigBrainQuiz/"  target="_blank" rel=”noopener”> Big Brain Quiz</a>
 </p>
 <br>
 
-![Name here](assets/images/Screenshot.png)
+![Name here](assets/images/responsive.png)
 
 <br>
-<p><strong>Original Quiz project mistakenly deleted from the repository, this Quiz was made based on the <a href="https://www.youtube.com/watch?v=W3WZaAQiQq0&t=3450s"  target="_blank" rel=”noopener”>
-Codi Academy TV</a> project for learning purposes and due to time constraints. Improvements such as question counter, user greeting have been implemented and congratulations message at the end with percentage of hits. (Link with original zip file of the video code available for verification.).</strong></p>
 
 <h2>User Experience</h2>
 <h3>User stories</h3>
@@ -32,17 +30,10 @@ Codi Academy TV</a> project for learning purposes and due to time constraints. I
 <ul>
 <li>Returning Visitor Goals</li>
 <ul>
-<li>As a returning visitor, I would like to be able to choose a different category of question levels.</li>
-</ul>
-<ul>
-<li>As a repeat visitor, I would like to repeat the test to possibly get more points.</li>
+<li>As a repeat visitor, I would like to switch order of questions and answers.</li>
 </ul>
 </ul>
 <ul>
-<li>Frequent User Goals</li>
-<ul>
-<li>As a frequent user, I would like to switch order of questions and answers.</li>
-</ul>
 </ul>
 
 <h3>Design</h3>
@@ -50,6 +41,7 @@ Codi Academy TV</a> project for learning purposes and due to time constraints. I
 <li>Colour</li>
 <ul>
 <li>A summer color scheme has been used, happy yet calm colors that match the logo of the game very well.</li>
+<br>
 
 ![Mobile Wireframe](assets/images/colors.png)
 </ul>
@@ -67,10 +59,12 @@ Codi Academy TV</a> project for learning purposes and due to time constraints. I
 </ul>
 </ul>
 
+<h3>Flowchart</h3>
 
-<h3>Wireframes</h3>
+![Flowchart](assets/images/flowchart.png)
 
 <br>
+<h3>Wireframes</h3>
 <p>Mobile Wireframe</p>
 
 ![Mobile Wireframe](assets/images/Wireframe.png)
@@ -81,7 +75,6 @@ Codi Academy TV</a> project for learning purposes and due to time constraints. I
 ![Home Page Wireframe](assets/images/desktop.png)
 
 <br>
-
 <h2>Features</h2>
 
 <h3>Responsiveness</h3>
@@ -98,7 +91,7 @@ Codi Academy TV</a> project for learning purposes and due to time constraints. I
 <h3>Initial Page</h3>
 <ul>
 <li>Start screen containing name and logo, introduction about question content.</li>
-<li>It also has username input (required) and a button to start the game.</li>
+<li>It also has username input (required), a button to start the game and limited to 10 characters.</li>
 </ul>
 
 ![index](assets/images/Initial.png)
@@ -107,7 +100,7 @@ Codi Academy TV</a> project for learning purposes and due to time constraints. I
 <h3>Header Game</h3>
 <ul>
 <li>Start screen containing name and logo.</li>
-<li>Greeting the user who remains throughout the game and tracking the number of questions </li>
+<li>Greeting the user who remains throughout the game and tracking the number of questions.</li>
 </ul>
 
 ![index](assets/images/header.png)
@@ -115,9 +108,8 @@ Codi Academy TV</a> project for learning purposes and due to time constraints. I
 <h3>Game Page</h3>
 <ul>
 <li>Game screen with title and answers.</li>
-<li>Scoreboard to keep track of the current score.</li>
-<li>Message congratulating in case of a hit, and in case of an error, displaying message along with correct answer.</li>
-<li>Restart button (returns to the first screen) and game exit button (closes the browser, in case of cell phones and tablets returns to the start screen).</li>
+<li>If the selected answer is correct the background color will be green, if the wrong answer is selected the color will be red and the right answer will appear in green. </li>
+<li>Next button to advance the questions, restart button (returns to the first screen) and exit button returns the login screen.</li>
 </ul>
 
 ![index](assets/images/questions.png)
@@ -129,6 +121,14 @@ Codi Academy TV</a> project for learning purposes and due to time constraints. I
 </ul>
 
 ![index](assets/images/congratulations.png)
+
+<h3>Final thank-you message</h3>
+<ul>
+<li>Message thanking you for playing.</li>
+</ul>
+
+![index](assets/images/thanks.png)
+
 
 <h2>Technologies Used</h2>
 <h3>Languages Used</h3>
@@ -158,6 +158,11 @@ Codi Academy TV</a> project for learning purposes and due to time constraints. I
 <li> <a href="https://git-scm.com/" target="_blank" rel=”noopener”>Git</a>
 <ul>
 <li>Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.</li>
+</ul>
+</li>
+<li> <a href="miro.com" target="_blank" rel=”noopener”>Miro</a>
+<ul>
+<li>Used to create the flowchart.</li>
 </ul>
 </li>
 </ol>
@@ -195,10 +200,10 @@ Codi Academy TV</a> project for learning purposes and due to time constraints. I
 | Greetings to the user           |   Captures user name and displays it on the quiz screen along with a greeting. |   as expected   | To spend             |
 | Question Counting|  Shows the number of questions answered and the quiz total.  |   as expected   | To spend             |
 | Quiz|  Shows questions and answers on the screen, switching automatically after clicking on the answer.|   as expected   | To spend             |
-| Scoreboard|  Keeps the score updated.|   as expected   | To spend             |
+| Scoreboard|  Scores appear at the end of the quiz, showing the number and percentage of correct answers.|   as expected   | To spend             |
 | Check Answers|  Correct or Incorrect Response Message (tells you the correct answer).|   as expected   | To spend             |
 | Restart Button / Play Again Button|  Guides the user to the first question and resets the score to zero.|   as expected   | To spend             |
-| Exit Button|  On the mobile screen it redirects the user to the home screen and on the browser it closes the screen.|   as expected   | To spend             |
+| Exit Button|  A thank you message for playing appears on the screen.|   as expected   | To spend             |
 | Final message|  Congratulates user, informs percentage and how many questions he got right.|   as expected   | To spend             |
 <br>
 
@@ -222,14 +227,19 @@ Codi Academy TV</a> project for learning purposes and due to time constraints. I
 <h3>Improvements to be Implemented</h3>
 <ul>
 <li>Insert Intermediate and Advanced Levels Sections</li>
-<li>Switch order of questions and answers.</li>
 </ul>
 
 <h3>Known Bugs</h3>
 <ul>
-<li>Adjustment to reset the :hover in question for mobile screens, because when clicked the mark remained in all other questions.</li>
+<li>When the login screen was started an internal error and when the start game button was clicked this error disappeared and entered another in its place for the same reason.</li>
 <ul>
-<li>Adjustment by inserting a JavaScript script (in process).</li>
+<li>With the help of the tutors I could realize that the error was generated because there were two HTML pages, the error was solved compatctando all the content of two HTML pages in one and making the necessary adaptations in the code.</li>
+<br>
+
+![index](assets/images/erro%20addevent.png)
+
+![index](assets/images/username.png)
+
 </ul>
 </ul>
 
@@ -240,7 +250,7 @@ Codi Academy TV</a> project for learning purposes and due to time constraints. I
 <h4></h4>
 <ol>
 <li>In the GitHub body of my page, click the menu button: repository;</li>
-<li>Locate the portfolio01 project and click;</li>
+<li>Locate the Big Brain Quiz project and click;</li>
 <li>Click on the button: settings;</li>
 <li>Click on the button: pages;</li>
 <li>Click on the button: visit the site.</li>
@@ -261,27 +271,32 @@ Codi Academy TV</a> project for learning purposes and due to time constraints. I
 <h3>Code</h3>
 
 <ul>
-<li> <a href="https://www.youtube.com/channel/UCN-wFj5TQDNMjQZEOp2RNfA" target="_blank" rel=”noopener”>Teacher Edson Maia</a>
+<li> <a href="https://stackoverflow.com/" target="_blank" rel=”noopener”>Stack Overflow</a>
 <ul>
-<li>Youtube channel with a series of instructional videos that helped me better understand JavaScript functions and structure.</li>
+<li>Used to increment the code with the restriction function to capture only letters in the input (browser).</li>
 </ul>
 </li>
 <li> <a href="https://www.youtube.com/@CodiAcademytv" target="_blank" rel=”noopener”>Codi Academy TV</a>
 <ul>
-<li>Youtube channel in which I used the video / code as reference for this project, I found it interesting to use it because it explains in a clear way how to transform functions into methods and objects, for better code refactoring. A different strategy of the proposed but I found it of great value and that added much knowledge.</li>
+<li>Youtube channel in which I used the video / code as reference for this project.</li>
 </ul>
 </li>
 <li> <a href="https://codeinstitute.net/ie/" target="_blank" rel=”noopener”>Code Institute</a>
 <ul>
 <li>README references.</li>
 </ul>
-</li>
-<li> <a href="https://stackoverflow.com/" target="_blank" rel=”noopener”>Stack Overflow</a>
 <ul>
-<li>README references.</li>
+<li>The tutoring and assistance of Sara, who helped me figure out how to fix a bug in my code.</li>
 </ul>
+</li>
+<li> <a href="https://horadecodar.com.br/" target="_blank" rel=”noopener”>Hora de Codar</a>
 <ul>
-<li>Running :hover in JavaScript.</li>
+<li>Channel in Portuguese where I was able to remember some of the functions, and increase the code with the SHUFFLE function.</li>
+</ul>
+</li>
+<li> <a href="https://blog.logrocket.com/localstorage-javascript-complete-guide/" target="_blank" rel=”noopener”>LogRocket</a>
+<ul>
+<li>Guide localStorage in JavaScript</li>
 </ul>
 </li>
 </ul>
@@ -318,8 +333,9 @@ Codi Academy TV</a> project for learning purposes and due to time constraints. I
 <ul>
 <li>To my husband and my daughter for their patience during all the long hours I spent at the computer.</li>
 </ul>
+<ul>
+<li>The Code institute team for the support and attention provided to me these past months.</li>
+</ul>
 
-<h2>Clarifications</h2>
-<p>Whenever I write code, I simultaneously work on other repositories to run different tests, but out of distraction I left files open while deleting old repositories, and ended up mistakenly deleting my almost finished project.</p>
-<p>Nothing justifies it, I learned from my mistake.</p>
+
 
