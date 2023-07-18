@@ -117,3 +117,40 @@ const questions = [
     const questionNumber = currentQuestion + 1;
     numberQuestionElement.textContent = questionNumber <= 10 ? questionNumber : '';
   }
+
+  // Check answer
+ function checkAnswer(event) {
+    const selectedAnswer = event.target;
+    const selectedAnswerIndex = Array.from(selectedAnswer.parentElement.children).indexOf(selectedAnswer);
+    const current = questions[currentQuestion];
+  
+    if (selectedAnswerIndex === current.correct) {
+      selectedAnswer.classList.add('correct');
+      score++;
+    } else {
+      selectedAnswer.classList.add('incorrect');
+      const correctAnswerElement = selectedAnswer.parentElement.children[current.correct];
+      correctAnswerElement.classList.add('correct');
+    }
+  
+    const answersElements = document.getElementsByClassName('answers');
+    for (let i = 0; i < answersElements.length; i++) {
+      answersElements[i].removeEventListener('click', checkAnswer);
+    }
+ 
+    const nextButton = document.getElementsByClassName('btn-next')[0];
+    nextButton.classList.remove('hidden');
+  }
+  
+  // Next question
+  function nextQuestion() {
+ 
+   nextButton.removeEventListener('click', nextQuestion);
+    currentQuestion++;
+  
+    if (currentQuestion >= questions.length) {
+      finishQuiz();
+    } else {
+      displayQuestion();
+    }
+  }
