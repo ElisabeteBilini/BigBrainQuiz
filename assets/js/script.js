@@ -190,3 +190,50 @@ const questions = [
     displayQuestion();
   }
   
+   // Exit game
+ function exitGame() {
+    document.getElementById('congrats').classList.add('hidden');
+    document.getElementsByClassName('main')[0].classList.add('hidden');
+    messageFinal.classList.remove('hidden');
+   }
+   
+   // Play again
+   function playAgain() {
+     currentQuestion = 0;
+     score = 0;
+   
+     document.getElementsByClassName('main')[0].classList.remove('hidden');
+     document.getElementById('congrats').classList.add('hidden');
+   
+     const nextButton = document.getElementsByClassName('btn-next')[0];
+     nextButton.classList.add('hidden');
+  
+    displayQuestion();
+   }
+  
+   
+   // Start quiz
+   function startQuiz() {
+     displayQuestion();
+  
+     nextButton.addEventListener('click', nextQuestion);
+   
+     const totalQuestionsElement = document.getElementsByClassName('totalQuestions')[0];
+     totalQuestionsElement.textContent = questions.length;
+   
+     const restartButton = document.getElementsByClassName('btn-restart')[0];
+     restartButton.addEventListener('click', restartQuiz);
+   
+     const exitButton = document.getElementsByClassName('btn-exit')[1];
+     exitButton.addEventListener('click', exitGame);
+   
+     const playAgainButton = document.getElementsByClassName('btn-play')[0];
+     playAgainButton.addEventListener('click', playAgain);
+  
+     document.getElementById('footer-btn').classList.remove('hidden');
+     document.getElementById('congrats-btn').classList.add('hidden');
+      
+   }
+  
+   window.addEventListener('load', startQuiz);
+   
