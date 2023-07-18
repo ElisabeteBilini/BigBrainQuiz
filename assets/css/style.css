@@ -7,7 +7,7 @@
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-/*        LOGIN.PAGE         */
+/* LOGIN PAGE */
 body{
   background: #add8e6;
   background-image: url('../images/point.jpg');
@@ -112,8 +112,7 @@ label{
   font-weight: bold;
 }
 
-/*GAME - PAGE*/
-
+/* GAME PAGE */
 header{
   display: flex;
   justify-content: center;
@@ -217,6 +216,8 @@ ul{
     color: #000;
 }
 
+
+/* CONGRATS PAGE */
 #congrats {
   height: 40vh;
   width: 600px;
@@ -277,6 +278,7 @@ display: none;
     gap: 20px;
 }
 
+/* FINAL MESSAGE PAGE */
 #message{
   flex-direction: column;
   text-align: center;
@@ -317,7 +319,7 @@ display: none;
   }
     
   .logo {
-    width: 8rem;
+    width: 5rem;
     animation: blink 1.5s linear infinite;
   } 
   
@@ -353,7 +355,6 @@ display: none;
     margin-top: 5px;
   }
     
-  /* game.html*/
   main{
     height: auto;
     margin: 10px 20px;
@@ -372,7 +373,7 @@ display: none;
   }
   
   .logo-game{
-    width: 4rem;
+    width: 2.5rem;
   }
   
   #hello {
@@ -433,5 +434,3 @@ display: none;
 }
 
 }
-
-
