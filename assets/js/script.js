@@ -1,13 +1,13 @@
- // Login Page
- const btnInitial = document.querySelector('.initial-btn');
- const collectName = document.getElementById('user');
- const loginPage = document.querySelector('.login');
- const mainPage = document.querySelector('.main');
- const congratsPage = document.getElementById('congrats');
- const messagePage = document.getElementById('message');
+//Login Page
+const btnInitial = document.querySelector('.initial-btn');
+const collectName = document.getElementById('user');
+const loginPage = document.querySelector('.login');
+const mainPage = document.querySelector('.main');
+const congratsPage = document.getElementById('congrats');
+const messagePage = document.getElementById('message');
 
- btnInitial.addEventListener('click', () => {
- 	const username = document.getElementById('username');
+btnInitial.addEventListener('click', () => {
+	const username = document.getElementById('username');
  	if (username) {
  		const collectName = username.value;
  		localStorage.setItem('userName', collectName); // Armazena o nome de usuário no localStorage
@@ -15,33 +15,33 @@
  		mainPage.classList.remove('hidden');
  		loginPage.classList.add('hidden');
  		document.querySelector('.user').textContent = collectName; // Exibe o nome de usuário na tela
- 	}
- });
+	}
+});
 
- if (collectName !== null) collectName.textContent = localStorage.getItem('userName');
+if (collectName !== null) collectName.textContent = localStorage.getItem('userName');
 
- function lettersOnly(event) {
- 	const input = document.getElementById('username');
- 	input.value = input.value.replace(/[^a-zA-Z]/g, '');
+function lettersOnly(event) {
+	const input = document.getElementById('username');
+	input.value = input.value.replace(/[^a-zA-Z]/g, '');
 
- 	if (!input.value.match(/^[a-zA-Z]+$/)) {
+	if (!input.value.match(/^[a-zA-Z]+$/)) {
  		event.preventDefault();
  		alert("Enter letters only.");
- 	}
+	}
 
- 	return true;
- }
+	return true;
+}
 
- // Game Page
+// Game Page
 
- // Array questions and answers 
- const questions = [{
+// Array questions and answers 
+const questions = [{
  		title: 'The Cold War was between the United States and what other world power?',
  		answers: ['The Soviet Union', 'Japan', 'China', 'Canada'],
  		correct: 0
- 	},
+	},
  	{
- 		title: 'What scandal forced US President Richard Nixon to resign in 1974?',
+		title: 'What scandal forced US President Richard Nixon to resign in 1974?',
  		answers: ['Iran-Contra Affair', 'Lewinsky Scandal', 'Watergate Scandal', 'Whitewater Scandal'],
  		correct: 2
  	},
@@ -85,31 +85,30 @@
  		answers: ['INIAC', 'CAINE', 'ENIAC', 'CNIEC'],
  		correct: 2
  	}
- ];
+];
 
- // shuffle questions
- function shuffleQuestions() {
- 	for (let i = questions.length - 1; i > 0; i--) {
- 		const j = Math.floor(Math.random() * (i + 1));
+// shuffle questions
+function shuffleQuestions() {
+	for (let i = questions.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
  		[questions[i], questions[j]] = [questions[j], questions[i]];
- 	}
- 	return questions;
- }
- shuffleQuestions();
+	}
+	return questions;
+}
+shuffleQuestions();
 
- // Variables
- let currentQuestion = 0;
- let score = 0;
- const messageFinal = document.getElementById('message');
- const nextButton = document.getElementsByClassName('btn-next')[0];
+// Variables
+let currentQuestion = 0;
+let score = 0;
+const messageFinal = document.getElementById('message');
+const nextButton = document.getElementsByClassName('btn-next')[0];
 
-
- function displayQuestion() {
- 	const questionElement = document.getElementById('title');
+function displayQuestion() {
+	const questionElement = document.getElementById('title');
  	const answersElements = document.getElementsByClassName('answers');
  	const numberQuestionElement = document.getElementsByClassName('numberQuestion')[0];
 
- 	const current = questions[currentQuestion];
+	const current = questions[currentQuestion];
  	questionElement.textContent = current.title;
 
  	for (let i = 0; i < answersElements.length; i++) {
@@ -117,14 +116,14 @@
  		answerElement.textContent = current.answers[i];
  		answerElement.classList.remove('correct', 'incorrect');
  		answerElement.addEventListener('click', checkAnswer);
- 	}
+	}
 
  	const questionNumber = currentQuestion + 1;
  	numberQuestionElement.textContent = questionNumber <= 10 ? questionNumber : '';
- }
+}
 
- // Check answer
- function checkAnswer(event) {
+// Check answer
+function checkAnswer(event) {
  	const selectedAnswer = event.target;
  	const selectedAnswerIndex = Array.from(selectedAnswer.parentElement.children).indexOf(selectedAnswer);
  	const current = questions[currentQuestion];
@@ -132,23 +131,23 @@
  	if (selectedAnswerIndex === current.correct) {
  		selectedAnswer.classList.add('correct');
  		score++;
- 	} else {
+	} else {
  		selectedAnswer.classList.add('incorrect');
  		const correctAnswerElement = selectedAnswer.parentElement.children[current.correct];
  		correctAnswerElement.classList.add('correct');
- 	}
+	}
 
  	const answersElements = document.getElementsByClassName('answers');
  	for (let i = 0; i < answersElements.length; i++) {
  		answersElements[i].removeEventListener('click', checkAnswer);
- 	}
+	}
 
  	const nextButton = document.getElementsByClassName('btn-next')[0];
  	nextButton.classList.remove('hidden');
- }
+}
 
- // Next question
- function nextQuestion() {
+// Next question
+function nextQuestion() {
 
  	nextButton.removeEventListener('click', nextQuestion);
  	currentQuestion++;
@@ -158,10 +157,10 @@
  	} else {
  		displayQuestion();
  	}
- }
+}
 
- // Finish quiz
- function finishQuiz() {
+// Finish quiz
+function finishQuiz() {
  	const totalQuestions = questions.length;
  	const percentage = (score / totalQuestions) * 100;
 
@@ -179,10 +178,10 @@
  	const nextButton = document.getElementsByClassName('btn-next')[0];
  	nextButton.classList.add('hidden');
 
- }
+}
 
- // Restart quiz
- function restartQuiz() {
+// Restart quiz
+function restartQuiz() {
  	currentQuestion = 0;
  	score = 0;
 
@@ -193,17 +192,17 @@
  	nextButton.classList.add('hidden');
 
  	displayQuestion();
- }
+}
 
- // Exit game
- function exitGame() {
+// Exit game
+function exitGame() {
  	document.getElementById('congrats').classList.add('hidden');
  	document.getElementsByClassName('main')[0].classList.add('hidden');
  	messageFinal.classList.remove('hidden');
- }
+}
 
- // Play again
- function playAgain() {
+// Play again
+function playAgain() {
  	currentQuestion = 0;
  	score = 0;
 
@@ -214,10 +213,10 @@
  	nextButton.classList.add('hidden');
 
  	displayQuestion();
- }
+}
 
- // Start quiz
- function startQuiz() {
+// Start quiz
+function startQuiz() {
  	displayQuestion();
 
  	nextButton.addEventListener('click', nextQuestion);
@@ -237,6 +236,6 @@
  	document.getElementById('footer-btn').classList.remove('hidden');
  	document.getElementById('congrats-btn').classList.add('hidden');
 
- }
+}
 
- window.addEventListener('load', startQuiz);
+window.addEventListener('load', startQuiz);
