@@ -309,7 +309,7 @@
 
 <h3>Code Clone</h3>
 <ul>
-<li> <a href=" https://elisabetebilini.github.io/redo-quiz/" target="_blank" rel=”noopener”>Redo Quiz</a>
+<li> <a href="https://elisabetebilini.github.io/redo-quiz/" target="_blank" rel=”noopener”>Redo Quiz</a>
 <ul>
 <li>Clone of the original project to redo all the quiz code, implement improvements, and perform tests.</li>
 </ul>
