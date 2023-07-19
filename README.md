@@ -302,9 +302,17 @@
 </li>
 <li> <a href="https://blog.logrocket.com/localstorage-javascript-complete-guide/" target="_blank" rel=”noopener”>LogRocket</a>
 <ul>
-<li>Guide localStorage in JavaScript</li>
+<li>Guide localStorage in JavaScript.</li>
 </ul>
 </li>
+</ul>
+
+<h3>Code Clone</h3>
+<ul>
+<li><a href=" https://elisabetebilini.github.io/redo-quiz/" target="_blank" rel=”noopener”>Redo Quiz</a></li>
+<ul>
+<li>Clone of the original project to redo all the quizzes code, implement improvements, and perform tests.</li>
+</ul>
 </ul>
 
 <h3>Content</h3>
@@ -328,7 +336,7 @@
 <li>Icon lamp.</li>
 </ul>
 </li>
-    <li><a href="https://avemateiu.com/"  target="_blank" rel=”noopener”> Ave Mateiu (pallete)</a></li>
+<li><a href="https://avemateiu.com/"  target="_blank" rel=”noopener”> Ave Mateiu (pallete)</a></li>
 <ul>
 <li>Colors.</li>
 </ul>
@@ -342,6 +350,7 @@
 <ul>
 <li>The Code institute team for the support and attention provided to me these past months.</li>
 </ul>
+
 
 
 
