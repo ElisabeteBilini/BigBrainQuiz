@@ -183,9 +183,6 @@
 <br>
 </ul>
 
-<h3>Testing with real users</h3>
-<p>Thanks to all my testing team, who sent me feedback on responsiveness, ease of understanding the information, usability and improvements (some already implemented), thank you all: Leonardo, Giovana, Tania, Gabriela, Efigenia, Lisa, Rhona, Nuala and Elisangela.</p>
-
 <h3>Testing User Stories from User Experience (UX) Section</h3>
 
 <ul>
@@ -193,6 +190,9 @@
 <li>As a user, I want a site that is intuitive and easy to navigate.</li>
 <li>As a user, I want it to challenge me to improve my knowledge.</li>
 </ul>
+
+<h3>Real users (testing team)</h3>
+<p>Thanks to all my testing team, who sent me feedback on responsiveness, ease of understanding the information, usability and improvements (some already implemented), thank you all: Leonardo, Giovana, Tania, Gabriela, Efigenia, Lisa, Rhona, Nuala and Elisangela.</p>
 
 <h3>Manual Testing</h3>
 <p>The manual test was done on a self-built desktop with an HP Pavilion Gaming Laptop, 16.1", Windows 10 Home, Intel® Core™ i5, 8GB RAM, 1TB HDD, NVIDIA® GeForce® GTX 1650 Ti</p>
@@ -309,10 +309,11 @@
 
 <h3>Code Clone</h3>
 <ul>
-<li><a href=" https://elisabetebilini.github.io/redo-quiz/" target="_blank" rel=”noopener”>Redo Quiz</a></li>
+<li> <a href=" https://elisabetebilini.github.io/redo-quiz/" target="_blank" rel=”noopener”>Redo Quiz</a>
 <ul>
-<li>Clone of the original project to redo all the quizzes code, implement improvements, and perform tests.</li>
+<li>Clone of the original project to redo all the quiz code, implement improvements, and perform tests.</li>
 </ul>
+</li>
 </ul>
 
 <h3>Content</h3>
