@@ -5,7 +5,7 @@
 <p>This game also has an evaluation method.</p>
 <p>We can say that quizzes are a practical way of learning, because this method assesses the degree of prior knowledge of a student on a given topic, as well as evaluating what is retained after entering the classroom in an interesting and innovative way.</p>
 <p>Visit our page by clicking here:
-<a href=" https://elisabetebilini.github.io/BigBrainQuiz/"  target="_blank" rel=”noopener”> Big Brain Quiz</a>
+<a href="https://elisabetebilini.github.io/BigBrainQuiz/"  target="_blank" rel=”noopener”> Big Brain Quiz</a>
 </p>
 <br>
 
@@ -109,7 +109,7 @@
 <ul>
 <li>Game screen with title and answers.</li>
 <li>If the selected answer is correct the background color will be green, if the wrong answer is selected the color will be red and the right answer will appear in green. </li>
-<li>Next button to advance the questions, restart button (returns to the first screen) and exit button returns the login screen.</li>
+<li>Next button to advance through the questions, Restart button returns to the first question resetting the score and Exit button takes you to the thank you for playing page.</li>
 </ul>
 
 ![index](assets/images/questions.png)
@@ -117,7 +117,7 @@
 <h3>Message Congratulations</h3>
 <ul>
 <li>Final message containing percentage of hits, and how many questions you got correct.</li>
-<li>Play button again (restarts the game on the first question) and Exit game button (closes screen on browser and returns to home page on smaller screens).</li>
+<li>The Play again button restarts the game on the first question and the Exit game button takes the user to the thank you for playing page.</li>
 </ul>
 
 ![index](assets/images/congratulations.png)
@@ -172,6 +172,7 @@
 <li> <a href="https://validator.w3.org/" target="_blank" rel=”noopener”>W3C Markup Validator</a></li>
 <li> <a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank" rel=”noopener”>W3C CSS Validator</a></li>
 <li> <a href="https://codebeautify.org/jsvalidate" target="_blank" rel=”noopener”>Code Beautify (JavaScript Validator)</a></li>
+<li> <a href="https://esprima.org/demo/validate.html" target="_blank" rel=”noopener”>Esprima Syntax Validator</a></li>
 <li>Lighthouse (Chrome Developer Tools)</a></li>
 <br>
 
@@ -181,6 +182,9 @@
 ![index](assets/images/Lighthouse2.png)
 <br>
 </ul>
+
+<h3>Testing with real users</h3>
+<p>Thanks to all my testing team, who sent me feedback on responsiveness, ease of understanding the information, usability and improvements (some already implemented), thank you all: Leonardo, Giovana, Tania, Gabriela, Efigenia, Lisa, Rhona, Nuala and Elisangela.</p>
 
 <h3>Testing User Stories from User Experience (UX) Section</h3>
 
@@ -196,7 +200,7 @@
 | Feature tested | Expected result                                    | Current results | Approved disapproved |
 | :---           |     :---:                                          |      :---:      |                 ---: |
 | Send username  |  Required User Collection.                          |   as expected   | To spend             |
-| Start button   |  When clicked, the survey page should open.        |   as expected   | To spend             |
+| Start button   |  When clicked, the questions page should open.        |   as expected   | To spend             |
 | Greetings to the user           |   Captures user name and displays it on the quiz screen along with a greeting. |   as expected   | To spend             |
 | Question Counting|  Shows the number of questions answered and the quiz total.  |   as expected   | To spend             |
 | Quiz|  Shows questions and answers on the screen, switching automatically after clicking on the answer.|   as expected   | To spend             |
@@ -221,7 +225,9 @@
 | Browser Tested              | Work Status        |
 | ----------------------------|--------------------|
 | Huawei Y5                   |  Works as expected |
+| Smartphone Xiaomi POCO X5   |  Works as expected |
 | Samsung Galaxy A12          |  Works as expected |
+| Iphone 11                   |  Works as expected |
 <br>
 
 <h3>Improvements to be Implemented</h3>
@@ -233,7 +239,7 @@
 <ul>
 <li>When the login screen was started an internal error and when the start game button was clicked this error disappeared and entered another in its place for the same reason.</li>
 <ul>
-<li>With the help of the tutors I could realize that the error was generated because there were two HTML pages, the error was solved compatctando all the content of two HTML pages in one and making the necessary adaptations in the code.</li>
+<li>With the help of the tutors I could realize that the error was generated because there were two HTML pages, the error was solved compressing all the content of two HTML pages in one and making the necessary adaptations in the code.</li>
 <br>
 
 ![index](assets/images/erro%20addevent.png)
